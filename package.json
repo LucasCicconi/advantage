@@ -1,5 +1,5 @@
 {
-  "name": "minha-app-angular-aws",
+  "name": "advantage",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:minha-app-angular-aws": "node dist/minha-app-angular-aws/server/server.mjs"
+    "serve:ssr:advantage": "node dist/advantage/server/server.mjs"
   },
   "private": true,
   "dependencies": {
