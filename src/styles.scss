@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+
+// 1. Inclui os estilos base obrigatórios (core styles).
+@include mat.core();
+
+// 2. Define o tema usando as paletas tonais do Material 3 diretamente.
+$advantage-theme: mat.define-theme((
+  color: (
+    theme-type: light, // ou 'dark'
+    primary: mat.$azure-palette,    // Paleta Azure para a cor primária
+    tertiary: mat.$blue-palette,   // Usando a paleta Blue para a cor terciária
+    // Para a cor de "aviso/erro" no M3, ela é definida separadamente
+    // ou implicitamente através da paleta de erro padrão.
+    // Não inclua 'warn' ou 'secondary' diretamente aqui dentro de 'color' da mesma forma que 'primary' ou 'tertiary'.
+    // O papel 'error' é geralmente derivado de mat.$red-palette por padrão para o tema.
+    // Se você precisar customizar a paleta de erro, pode ser feito assim:
+    // error: mat.$custom-red-palette, // Se você tivesse uma paleta de erro customizada
+  )
+  // typography: mat.define-typography-config(), // Mantendo comentado por enquanto
+  // density: 0
+));
+
+// 3. Aplica o tema a todos os componentes do Angular Material globalmente.
+html {
+  // Aplica os temas de cor e tipografia para os componentes
+  @include mat.all-component-themes($advantage-theme);
+
+  // Aplica cores de sistema (como cor de fundo da página, cor do texto)
+  @include mat.system-level-colors($advantage-theme);
+  // @include mat.typography-hierarchy($advantage-theme); // Mantenha comentado se a tipografia está comentada acima
+
+  background-color: mat.get-theme-color($advantage-theme, surface-container-lowest);
+  color: mat.get-theme-color($advantage-theme, on-surface);
+}
+
+// Estilos globais personalizados
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,40 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); // Ajustar conforme altura do header/footer
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px; /* Adiciona um pouco de espaço abaixo do título */
+}
+
+.login-footer {
+  text-align: center;
+  padding: 16px 0 0; /* Adiciona padding acima do texto do rodapé do card */
+  font-size: 0.9em;
+}
+
+.login-footer a, mat-card-actions a {
+  text-decoration: none; // Opcional: remover sublinhado padrão de links
+}
