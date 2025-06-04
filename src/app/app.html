@@ -1,0 +1,21 @@
+<header style="background-color: #f0f0f0; padding: 20px; text-align: center;">
+  <h1>Advantage</h1>
+  <nav>
+    <a routerLink="/" style="margin: 0 10px;">Home</a>
+    <a routerLink="/dashboard" style="margin: 0 10px;">Painel</a>
+    <a routerLink="/profile/manage" style="margin: 0 10px;">Meu Perfil</a>
+    <a routerLink="/auth/login" style="margin: 0 10px;">Login</a>
+    <a routerLink="/auth/register" style="margin: 0 10px;">Registrar</a>
+  </nav>
+</header>
+
+<main style="padding: 20px; min-height: calc(100vh - 200px);"> <router-outlet></router-outlet>
+</main>
+
+<footer style="background-color: #f0f0f0; padding: 10px; text-align: center; margin-top: 20px;">
+  <p>&copy; {{ currentYear }} Advantage. Todos os direitos reservados.</p>
+  <nav>
+    <a routerLink="/legal/terms-of-service" style="margin: 0 10px;">Termos de Serviço</a>
+    <a routerLink="/legal/privacy-policy" style="margin: 0 10px;">Política de Privacidade</a>
+  </nav>
+</footer>

@@ -1,0 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts,scss}", // Observa arquivos HTML, TS e SCSS na pasta src
+  ],
+  theme: {
+    extend: {
+      // Aqui você pode adicionar suas customizações de tema no futuro
+      // Ex: cores, fontes, espaçamentos, etc.
+      // colors: {
+      //   'brand-blue': '#1976d2',
+      // },
+    },
+  },
+  plugins: [
+    // Aqui você pode adicionar plugins do Tailwind no futuro
+    // Ex: require('@tailwindcss/forms'),
+  ],
+}
+//tailwind.config.js
